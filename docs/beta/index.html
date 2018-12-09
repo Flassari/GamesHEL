@@ -85,16 +85,20 @@
 			<div id="info_container">
 				<div id="info_content">
 					<h2>What is Games HEL?</h2>
-					<strong>Games HEL</strong> is a one-day mini-conference in Helsinki focusing solely on Console and PC games. We want it to be a space for game makers to share their knowledge and experience with their peers.
-					<h2>Where? When?</h2>
-					It's going to be a small, intimate event with ~100 attendees from the Finnish dev scene on <strong>Saturday, February 2nd.</strong><br/>
-					We'll take over <a href="https://www.gamesfactory.fi/" target="_blank" rel="noopener">Games Factory</a> for a day of talks, followed by evening mingling and finishing the night with an afterparty.
+					<strong>Games HEL</strong> is a one-day mini-conference in Helsinki focusing on Console and PC games. It's going to be a small, intimate event with ~100 attendees from the Finnish dev scene. We'll take over Games Factory for a day of talks, followed by evening mingling and finishing the night with an afterparty.
+					<h2>Where?</h2>
+					<a href="https://www.gamesfactory.fi/" target="_blank" rel="noopener">Games Factory</a><br/>
+					Lapinlahdenkatu 16, Building 5<br/>
+					00180 Helsinki
+					<h2>When?</h2>
+					Saturday, February 2nd.<br/>
 					<h2>Organizers</h2>
 					<strong>Games HEL</strong> is volunteer organized by Ari Arnbjörnsson (Housemarque, Finland Unity User Group Main Organizer) and Eevi Korhonen (Housemarque, Ropecon Main Organizer).
+					<h2>Contact</h2>
+					<a href="mailto:contact@gameshel.com">contact@GamesHEL.com</a>
 				</div>
-				<div id="map">
-					<iframe width="100%" height="100%" frameborder="0" style="border:0" title="Google Maps Location for Games Factory" src="https://www.google.com/maps/embed/v1/place?q=Helsinki%20Games%20Factory&key=AIzaSyDbo71wXjOaajJjgaM4T2fCpiG9q9Abcus" allowfullscreen></iframe>
-				</div>
+				
+				<div id="map"></div>
 			</div>
 			
 		</div>
@@ -142,5 +146,23 @@
 			Privacy Policy: We don't track you on this page. See <a href="https://www.eventbrite.com/privacypolicy" target="_blank" rel="noopener"> EventBrite's privacy policy</a> for tickets. See <a href="https://mailchimp.com/legal/" target="_blank" rel="noopener">MailChimp's privacy policy</a> for email list.
 		</div>
 	</footer>
+
+	<script>
+	function initMap() {
+		var buildings="#ffa500", buildingOutlines="#9d6600", ground="#ffedca", poi="#ffdb97", roads="#ffffff", roadOutline="#b77700", text="#6c4600", textOutline = "#ffffff", ocean="#b9d3c2";
+		// Styles a map in night mode.
+		var map = new google.maps.Map(document.getElementById('map'), {
+		center: {lat: 60.1664, lng: 24.9216},
+		zoom: 17,
+		styles: [{"elementType":"labels.text.fill","stylers":[{"color":text}]},{"elementType":"labels.text.stroke","stylers":[{"color":textOutline}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":ground}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":buildings}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"color":buildingOutlines}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":poi}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":roads}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":roadOutline},{"weight":1}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":text}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":roadOutline}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":ocean}]}]
+		});
+		var marker = new google.maps.Marker({
+			position: {lat: 60.1664, lng: 24.9216},
+			map: map,
+			title: 'Games Factory'
+		});
+	}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbo71wXjOaajJjgaM4T2fCpiG9q9Abcus&callback=initMap" async defer></script>
 </body>
 </html>
