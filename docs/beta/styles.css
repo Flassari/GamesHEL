@@ -84,6 +84,7 @@ h1 {
 	width: 85px;
 	height: 85px;
 	background-color: darkorange;
+	flex: none;
 }
 
 .speaker_header {
