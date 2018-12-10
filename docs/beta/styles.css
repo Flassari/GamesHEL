@@ -15,7 +15,7 @@ table {
 }
 
 html, body {
-	line-height: 1;
+	line-height: 1.25;
 	font-family: sans-serif;
 }
 
@@ -60,6 +60,7 @@ h1 {
 	margin: 0 auto;
 	text-align: center;
 	font-size: 80px;
+	line-height: 1;
 }
 
 #conference_date {
@@ -85,11 +86,11 @@ h1 {
 }
 
 .expanded .program_header {
-	background: rgba(255,165,0,.8);
+	background: rgba(255,165,0,.93);
 }
 
 .program_body {
-	background: rgba(255,165,0,.7);
+	background: rgba(255,165,0,.8);
 	font-size: 18px;
 }
 
@@ -113,7 +114,7 @@ h1 {
 
 .speaker_details {
 	flex-grow: 1;
-	padding: 15px 7px 10px 7px;
+	padding: 7px;
 }
 
 .presentation_title {
@@ -132,7 +133,6 @@ h1 {
 }
 
 .speaker_post {
-	padding-top: 3px;
 	display: block;
 }
 
