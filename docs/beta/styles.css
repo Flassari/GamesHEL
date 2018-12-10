@@ -76,20 +76,44 @@ h1 {
 
 .program_listing {
 	background: orange;
+	margin: 10px 0 25px 0;
+}
+
+.expanded {
+	background-size: cover;
+	background-position: center top;
+}
+
+.expanded .program_header {
+	background: rgba(255,165,0,.8);
+}
+
+.program_body {
+	background: rgba(255,165,0,.7);
+	font-size: 18px;
+}
+
+.program_header {
 	display: flex;
-	margin: 10px 0;
 }
 
 .speaker_portrait {
-	width: 85px;
-	height: 85px;
-	background-color: darkorange;
+	width: 100px;
+	height: 100px;
 	flex: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.speaker_header {
+.speaker_portrait img {
+	width: 85px;
+	height: 85px;
+}
+
+.speaker_details {
 	flex-grow: 1;
-	padding: 7px;
+	padding: 15px 7px 10px 7px;
 }
 
 .presentation_title {
@@ -113,6 +137,18 @@ h1 {
 }
 
 .speaker_company {
+	font-weight: bold;
+}
+
+.program_body {
+	padding: 20px;
+}
+
+.program_description {
+	padding-bottom: 30px;
+}
+
+.speake_bio_title {
 	font-weight: bold;
 }
 
