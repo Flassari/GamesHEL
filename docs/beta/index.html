@@ -31,7 +31,7 @@
 		<div class="centered_section_container">
 			<h1>Program</h1>
 
-			<div class="program_listing expanded control" style="background-image: url('img/control.jpg')">
+			<div class="program_listing" style="background-image: url('img/control.jpg')">
 				<div class="program_header">
 					<div class="speaker_portrait"><img src="img/juha_vainio_small.jpg" alt=""/></div> 
 					<div class="speaker_details">
@@ -39,6 +39,7 @@
 						<span class="speaker_name">Juha Vainio</span>
 						<span class="speaker_post"><span class="speaker_company">Remedy</span>, Executive Producer</span>
 					</div>
+					<div class="expand_program"></div>
 				</div>
 				<div class="program_body">
 					<p class="program_description">
@@ -50,7 +51,7 @@
 				</div>
 			</div>
 
-			<div class="program_listing expanded control" style="background-image: url('img/nex_machina.jpg')">
+			<div class="program_listing" style="background-image: url('img/nex_machina.jpg')">
 				<div class="program_header">
 					<div class="speaker_portrait"><img src="img/harry_krueger_small.jpg" alt=""/></div> 
 					<div class="speaker_details">
@@ -58,6 +59,7 @@
 						<span class="speaker_name">Harry Krueger</span>
 						<span class="speaker_post"><span class="speaker_company">Housemarque</span>, Game Director</span>
 					</div>
+					<div class="expand_program"></div>
 				</div>
 				<div class="program_body">
 					<p class="program_description">
@@ -72,7 +74,7 @@
 				</div>
 			</div>
 
-			<div class="program_listing expanded control" style="background-image: url('img/downward_spiral.jpg')">
+			<div class="program_listing" style="background-image: url('img/downward_spiral.jpg')">
 				<div class="program_header">
 					<div class="speaker_portrait"><img src="img/veli_pekka_kokkonen_small.jpg" alt=""/></div> 
 					<div class="speaker_details">
@@ -80,6 +82,7 @@
 						<span class="speaker_name">Veli-Pekka Kokkonen</span>
 						<span class="speaker_post"><span class="speaker_company">GOTO Labs</span>, CEO &amp; Co-Founder</span>
 					</div>
+					<div class="expand_program"></div>
 				</div>
 				<div class="program_body">
 					<p class="program_description">Description coming soon.</p>
@@ -89,7 +92,7 @@
 				</div>
 			</div>
 
-			<div class="program_listing expanded control" style="background-image: url('img/stone.jpg')">
+			<div class="program_listing" style="background-image: url('img/stone.jpg')">
 				<div class="program_header">
 					<div class="speaker_portrait"><img src="img/greg_louden_small.jpg" alt=""/></div> 
 					<div class="speaker_details">
@@ -97,6 +100,7 @@
 						<span class="speaker_name">Greg Louden</span>
 						<span class="speaker_post"><span class="speaker_company">Convict Games</span>, Chief Convict</span>
 					</div>
+					<div class="expand_program"></div>
 				</div>
 				<div class="program_body">
 					<p class="program_description">
@@ -201,21 +205,28 @@
 		</div>
 	</footer>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
-	function initMap() {
-		var buildings="#ffa500", buildingOutlines="#9d6600", ground="#ffedca", poi="#ffdb97", roads="#ffffff", roadOutline="#b77700", text="#6c4600", textOutline = "#ffffff", ocean="#b9d3c2";
-		// Styles a map in night mode.
-		var map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 60.1664, lng: 24.9216},
-		zoom: 17,
-		styles: [{"elementType":"labels.text.fill","stylers":[{"color":text}]},{"elementType":"labels.text.stroke","stylers":[{"color":textOutline}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":ground}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":buildings}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"color":buildingOutlines}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":poi}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":roads}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":roadOutline},{"weight":1}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":text}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":roadOutline}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":ocean}]}]
+		function initMap() {
+			var buildings="#ffa500", buildingOutlines="#9d6600", ground="#ffedca", poi="#ffdb97", roads="#ffffff", roadOutline="#b77700", text="#6c4600", textOutline = "#ffffff", ocean="#b9d3c2";
+			// Styles a map in night mode.
+			var map = new google.maps.Map(document.getElementById('map'), {
+			center: {lat: 60.1664, lng: 24.9216},
+			zoom: 17,
+			styles: [{"elementType":"labels.text.fill","stylers":[{"color":text}]},{"elementType":"labels.text.stroke","stylers":[{"color":textOutline}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":ground}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":buildings}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"color":buildingOutlines}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":poi}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":roads}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":roadOutline},{"weight":1}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":text}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":roadOutline}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":ocean}]}]
+			});
+			var marker = new google.maps.Marker({
+				position: {lat: 60.1664, lng: 24.9216},
+				map: map,
+				title: 'Games Factory'
+			});
+		}
+		
+		$(document).ready(function(){
+			$(".expand_program").click(function(e){
+				$(this).parent().parent().toggleClass("expanded");
+			});
 		});
-		var marker = new google.maps.Marker({
-			position: {lat: 60.1664, lng: 24.9216},
-			map: map,
-			title: 'Games Factory'
-		});
-	}
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbo71wXjOaajJjgaM4T2fCpiG9q9Abcus&callback=initMap" async defer></script>
 </body>
