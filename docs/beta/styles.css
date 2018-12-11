@@ -136,7 +136,7 @@ h1 {
 	}
 
 	.expand_program {
-		height: 100px;
+		height: auto;
 		width: 17%;
 		max-width: 100px;
 	}
