@@ -78,12 +78,32 @@ h1 {
 .program_listing {
 	background: orange;
 	background-size: 0 0;
-	margin: 10px 0 25px 0;
+	margin: 10px 0 16px 0;
+}
+
+.program_listing .program_time {
+	font-weight: bold;
 }
 
 .program_listing.expanded {
 	background-size: cover;
 	background-position: center top;
+}
+
+.no_details {
+	padding: 7.5px;
+	font-size: 20px;
+	display: flex;
+}
+
+.no_details .program_time {
+	width: 92.5px;
+	text-align: center;
+}
+
+.no_details .no_details_description {
+	flex: 1;
+	padding-left: 7.5px;
 }
 
 .program_header {
