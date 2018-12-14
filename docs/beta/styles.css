@@ -244,6 +244,22 @@ h1 {
 	background: orange;
 }
 
+@media (min-width: 750px) {	
+	#info_container {	
+		flex-wrap: nowrap;	
+		align-items: stretch;	
+ 	}	
+	#info_content {	
+		flex-grow: 0;	
+	}	
+	#map {	
+		width: 350px;	
+		height: auto;	
+		min-height: 300px;	
+		align-self: stretch;	
+	}	
+}
+
 #mce-EMAIL {
 	padding: 5px;
 	border: 1px solid #662200;
