@@ -77,11 +77,8 @@ h1 {
 
 .program_listing {
 	background: orange;
-	margin: 10px 0 25px 0;
-}
-
-.program_listing {
 	background-size: 0 0;
+	margin: 10px 0 25px 0;
 }
 
 .program_listing.expanded {
@@ -93,6 +90,7 @@ h1 {
 	display: flex;
 	background: rgba(255,165,0, 1);
 	flex-wrap: wrap;
+	cursor: pointer;
 }
 
 .expanded .program_header {
@@ -127,7 +125,6 @@ h1 {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 20px;
-	cursor: pointer;
 }
 
 @media (min-width: 400px) {
