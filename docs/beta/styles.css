@@ -313,6 +313,11 @@ h1 {
 #sponsor_logos {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#sponsor_logos a {
+	padding: 10px 10px 10px 10px;
 }
 
 #privacy_policy {
