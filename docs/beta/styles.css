@@ -49,18 +49,27 @@ h1 {
 }
 
 #header {
+	padding: 10px;
 	text-align: center;
-	height: 500px;
+	height: 400px;
 	display:flex;
 	align-items: center;
 	justify-content: center;
 }
 
+@media (min-width: 400px) {
+	#header {
+		height: 600px;
+	}
+}
+
 #logo {
 	margin: 0 auto;
-	text-align: center;
-	font-size: 80px;
-	line-height: 1;
+}
+
+#logo img {
+	width: 100%;
+	max-width: 500px;
 }
 
 #conference_date {
