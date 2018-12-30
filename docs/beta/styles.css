@@ -49,17 +49,15 @@ h1 {
 }
 
 #header {
-	padding: 10px;
+	padding: 100px 10px 100px 10px;
 	text-align: center;
-	height: 400px;
 	display:flex;
-	align-items: center;
-	justify-content: center;
+	flex-direction: column;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 600px) {
 	#header {
-		height: 600px;
+		padding: 220px 10px 80px 10px;
 	}
 }
 
@@ -72,8 +70,30 @@ h1 {
 	max-width: 500px;
 }
 
-#conference_date {
-	font-size: 20px;
+#conference_subtext {
+	font-size: 30px;
+}
+
+#info_icons {
+	font-size: 25px;
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+	#info_icons {
+		flex-direction: row;
+	}
+}
+
+.info_icon {
+	padding: 20px 0;
+} 
+
+.info_icon img {
+	height: 85px;
 }
 
 #program {
