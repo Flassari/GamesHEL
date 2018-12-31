@@ -53,6 +53,8 @@ h1 {
 	text-align: center;
 	display:flex;
 	flex-direction: column;
+	color: white;
+	background: black;
 }
 
 @media (min-width: 600px) {
@@ -75,7 +77,6 @@ h1 {
 }
 
 #info_icons {
-	font-size: 25px;
 	padding-top: 100px;
 	display: flex;
 	flex-direction: column;
@@ -90,27 +91,113 @@ h1 {
 
 .info_icon {
 	padding: 20px 0;
-} 
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.info_icon a:link, .info_icon a:visited {
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+}
 
 .info_icon img {
-	height: 85px;
+	height: 16px;
+	padding-right: 10px;
+}
+
+#description {
+	background: #4a0308;
+	color: white;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+#description_content {
+	display: flex;
+	flex-direction: column;
+}
+
+#description_sponsors {
+	flex: 1;
+	width: auto;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding-bottom: 70px;
+}
+
+#description_sponsors img {
+	height: 100px;
+	padding: 20px;
+}
+
+#description_text {
+	flex: 1;
+	text-align: justify;
+}
+
+@media (min-width: 700px) {
+	#description_content {
+		flex-direction: row;
+	}
+
+	#description_sponsors {
+		flex: none;
+		width: 300px;
+		padding-right: 100px;
+		padding-bottom: 0;
+		justify-content: space-between;
+	}
+
+	#description_sponsors img {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 #program {
-	background: black;
+	background: white;
 }
 
 #program h1 {
-	color: white;
+	display: none;
 }
 
 .program_listing {
-	background: orange;
-	background-size: 0 0;
-	margin: 10px 0 16px 0;
+	display: flex;
+	flex-direction: column;
+	font-size: 20px;
+	margin: 10px 0 30px 0;
 }
 
-.program_listing .program_time {
+.program_header {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+
+.no_details .program_header {
+	cursor: auto;
+}
+
+.program_time {
+	color: #822d2d;
+	width: 80px;
+	font-weight: bold;
+	flex: none;
+}
+
+.program_info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.program_title {
 	font-weight: bold;
 }
 
@@ -119,31 +206,11 @@ h1 {
 	background-position: center top;
 }
 
-.no_details {
-	padding: 7.5px;
-	font-size: 20px;
+
+
+.program_speaker {
 	display: flex;
-}
-
-.no_details .program_time {
-	width: 92.5px;
-	text-align: center;
-}
-
-.no_details .no_details_description {
-	flex: 1;
-	padding-left: 7.5px;
-}
-
-.program_header {
-	display: flex;
-	background: rgba(255,165,0, 1);
-	flex-wrap: wrap;
-	cursor: pointer;
-}
-
-.expanded .program_header {
-	background: rgba(255,165,0,.93);
+	flex-direction: row;
 }
 
 .speaker_portrait {
@@ -162,14 +229,15 @@ h1 {
 
 .speaker_details {
 	flex: 1;
-	padding: 7px;
+	padding: 7px 7px 7px 7px;
+	align-self: center;
+	font-size: 18px;
 }
 
 .expand_program {
 	width: 100%;
 	height: 40px;
 	flex: none;
-	background: darkorange;
 	background-image: url('img/more.png');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -194,28 +262,30 @@ h1 {
 }
 
 .program_body {
-	background: rgba(253, 185, 62, 0.87);
-	font-size: 18px;
+	background: #f1f1f1;
+	font-size: 15px;
 	display: none;
+	text-align: justify;
+	padding: 20px;
+	color: black;
+	margin-left: 80px;
 }
 
 .expanded .program_body {
-	display: block;
+	display: flex;
 }
 
-.presentation_title {
-	padding-bottom: 5px;
-}
-
-.unannounced_header {
-	display:flex;
-    align-items: center;
+.program_image {
+	flex: none;
+	width: 300px;
+	min-height: 350px;
+	background-position: top center;
+	margin-left: 20px;
 }
 
 .speaker_name {
 	display: block;
 	font-weight: bold;
-	font-size: 20px;
 }
 
 .speaker_post {
@@ -224,10 +294,6 @@ h1 {
 
 .speaker_company {
 	font-weight: bold;
-}
-
-.program_body {
-	padding: 20px;
 }
 
 .program_description {
@@ -392,7 +458,8 @@ h1 {
 }
 
 #sponsors {
-	background: orange;
+	background: #4a0308;
+	color: white;
 }
 
 #sponsor_logos {
