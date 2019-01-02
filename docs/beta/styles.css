@@ -209,6 +209,7 @@ h1 {
 	width: 80px;
 	font-weight: bold;
 	flex: none;
+	padding-top: 6px;
 }
 
 .program_info {
