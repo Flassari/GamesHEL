@@ -59,15 +59,6 @@ h1 {
 	background-repeat: no-repeat;
 }
 
-# {
-	margin: 0 auto;
-}
-
-# img {
-	width: 100%;
-	max-width: 500px;
-}
-
 #conference_subtext {
 	font-size: 30px;
 }
@@ -361,12 +352,10 @@ h1 {
 	color: white;
 }
 
-#info {
-	background: black;
-}
 
-#info h1 {
-	color: white;
+
+#info {
+	background: white;
 }
 
 #info_container {
@@ -410,6 +399,15 @@ h1 {
 		min-height: 300px;	
 		align-self: stretch;	
 	}	
+}
+
+#mailing_list {
+	background: black;
+	color: white;
+}
+
+#mailing_list a:link, #mailing_list a:visited {
+	color: white;
 }
 
 #mce-EMAIL {
@@ -511,10 +509,6 @@ h1 {
 
 #sam {
 	padding: 100px 0 0 30px;
-}
-
-#footer {
-	
 }
 
 #footer .centered_section_container {
