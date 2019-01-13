@@ -59,6 +59,14 @@ h1 {
 	background-repeat: no-repeat;
 }
 
+#hero_tickets {
+	display: none;
+}
+
+#hero_tickets a:link, #hero_tickets a:visited {
+	color: white;
+}
+
 #conference_subtext {
 	font-size: 30px;
 }
@@ -359,7 +367,19 @@ h1 {
 	color: white;
 }
 
+#countdown {
+	text-align: center;
+	padding: 10px 0 40px 0;
+	font-size: 21px;
+}
 
+#buy_tickets {
+	display: none;
+}
+
+#buy_tickets .button {
+	background: #4a0308;
+}
 
 #info {
 	background: white;
@@ -448,18 +468,18 @@ h1 {
 	padding: 5px 0;
 }
 
+
+#mc-embedded-subscribe {
+	background: black;
+}
+
 .button {
+	width: 200px;
 	font-size: 20px;
 	margin: 5px 0;
 	padding: 7px;
-	background: #4a0308;
 	color: white;
-}
-
-@media (min-width: 250px) {
-	#mc-embedded-subscribe {
-		width: 200px;
-	}
+	border: 2px solid white;
 }
 
 #organizers {
