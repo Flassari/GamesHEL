@@ -59,10 +59,6 @@ h1 {
 	background-repeat: no-repeat;
 }
 
-#hero_tickets {
-	display: none;
-}
-
 #hero_tickets a:link, #hero_tickets a:visited {
 	color: white;
 }
