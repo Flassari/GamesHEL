@@ -380,11 +380,7 @@
 	<section id="tickets">
 		<div class="centered_section_container">
 			<h1>Tickets</h1>
-			<div id="countdown"></div>
-			<div id="tickets_presale_desc">
-				Ticket sales open on January 14th at 12:00. <a href="#mailing_list">Subscribe</a> to our announcements mailing list below to get notified before the general public.
-			</div>
-			<div id="buy_tickets"><input type="button" value="Buy tickets" class="button" onClick="javascript: window.open('https://gameshelsinki2019.eventbrite.com');"/></div>
+			<div id="buy_tickets" style="display: block"><input type="button" value="Buy tickets" class="button" onClick="javascript: window.open('https://gameshelsinki2019.eventbrite.com');"/></div>
 		</div>
 	</section>
 
@@ -508,50 +504,12 @@
 			});
 		}
 
-		var ticketOpenTime = new Date("Feb 2, 2019 12:00:00").getTime();
-		function countDown() {
-			var delta = ticketOpenTime - new Date().getTime();
-
-			if (delta < 0) {
-				// Ticket sales open!
-				$("#tickets_presale_desc").css("display","none");
-				$("#countdown").css("display","none");
-				$("#buy_tickets").css("display","block");
-
-				$("#hero_presale_desc").css("display","none");
-				$("#hero_tickets").css("display","block");
-			}
-			else
-			{
-				var hours = Math.floor((delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				var minutes = Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60));
-				var seconds = Math.floor((delta % (1000 * 60)) / 1000);
-				var hoursText = hours + (hours == 1 ? " hour" : " hours"),
-					minutesText = minutes + (minutes == 1 ? " minute" : " minutes"),
-					secondsText = seconds + (seconds == 1 ? " second" : " seconds");
-
-				var countDownText;
-
-				if (hours > 0) {
-					countDownText = hoursText + ", " + minutesText + " and " + secondsText;
-				}
-				else if (minutes > 0) {
-					countDownText = minutesText + " and " + secondsText;
-				}
-				else {
-					countDownText = secondsText;
-				}
-
-				$("#countdown").text(countDownText);
-				setTimeout(countDown, 1000);
-			}
-		}
+		
 		
 		$(document).ready(function(){
 			$(".program_header").click(function(e){
 				$(this).parent().toggleClass("expanded");
 			});
-			countDown();
 		});
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbo71wXjOaajJjgaM4T2fCpiG9q9Abcus&callback=initMap" async defer></script>
