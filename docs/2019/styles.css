@@ -139,37 +139,22 @@ h1 {
 	flex-direction: row;
 }
 
-#description_sponsor_section {
+#description_sponsors {
 	flex: none;
-	padding-right: 60px;
-	width: 340px;
-}
-
-#description_sponsor_section #helsinki {
-	display: block;
-	width: 250px;
-	margin: 0 auto;
-}
-
-#description_sponsor_section #helsinki img {
-	width: 100%;
-}
-
-#description_other_sponsors {
+	width: 300px;
+	
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
 	justify-content: space-between;
 
 	padding-bottom: 0;
+
+	padding-right: 100px;
+
 }
 
-
-#description_other_sponsors a {
-	margin: 0 auto;
-}
-
-#description_other_sponsors img {
+#description_sponsors img {
 	height: 100px;
 	
 }
@@ -184,12 +169,7 @@ h1 {
 		flex-direction: column;
 	}
 
-	#description_sponsor_section {
-		width: auto;
-		padding: 0;
-	}
-
-	#description_other_sponsors {
+	#description_sponsors {
 		flex: 1;
 		width: auto;
 		padding-right: 0;
@@ -197,8 +177,8 @@ h1 {
 		justify-content: space-evenly;
 	}
 
-	#description_sponsor_section img {
-		
+	#description_sponsors img {
+		padding: 20px;
 	}
 }
 
@@ -421,30 +401,35 @@ h1 {
 	padding: 15px 0 5px 0;
 }
 
-#venue {
+#map {
 	width: 100%;
-	max-width: 400px;
+	height: 400px;
+	flex-shrink: 0;
+	background: orange;
 }
 
 @media (min-width: 750px) {	
 	#info_container {	
 		flex-wrap: nowrap;	
-		align-items: flex-start;	
+		align-items: stretch;	
  	}	
 	#info_content {	
 		flex-grow: 0;	
 	}	
-	#venue {	
-		width: 350px;
+	#map {	
+		width: 350px;	
+		height: auto;	
+		min-height: 300px;	
+		align-self: stretch;	
 	}	
 }
 
-#mailing_list, #previous_events {
+#mailing_list {
 	background: black;
 	color: white;
 }
 
-#mailing_list a:link, #mailing_list a:visited, #previous_events a:link, #previous_events a:visited {
+#mailing_list a:link, #mailing_list a:visited {
 	color: white;
 }
 
@@ -570,7 +555,7 @@ h1 {
 
 #privacy_policy {
 	text-align: center;
-	padding: 5px 0;
+	padding-bottom: 5px;
 	font-size: 12px;
 }
 .collapse {
