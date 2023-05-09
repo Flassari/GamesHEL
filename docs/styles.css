@@ -93,7 +93,7 @@ h1 {
 	padding-right: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	#header {
 		background-position: center -81px;
 		height: 566px;
@@ -131,7 +131,13 @@ h1 {
 	background: #4a0308;
 	color: white;
 	padding-top: 70px;
-	padding-bottom: 70px;
+}
+
+@media (max-width: 700px) {
+	#description {
+		padding-top: 0;
+	padding-bottom: 0;
+	}
 }
 
 #description_content {
@@ -142,7 +148,6 @@ h1 {
 #description_sponsor_section {
 	flex: none;
 	padding-right: 60px;
-	width: 340px;
 }
 
 #description_sponsor_section #helsinki {
@@ -560,12 +565,19 @@ h1 {
 
 #sponsor_logos {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	flex-wrap: wrap;
+
 }
 
 #sponsor_logos a {
 	margin: 10px 25px 10px 25px;
+}
+
+@media (max-width: 750px) {	
+	#sponsor_logos img {
+		height: 100px;
+	}
 }
 
 #privacy_policy {
