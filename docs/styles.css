@@ -130,7 +130,7 @@ h1 {
 #description {
 	background: #4a0308;
 	color: white;
-	padding-top: 70px;
+	padding-top: 30px;
 }
 
 @media (max-width: 700px) {
@@ -182,6 +182,7 @@ h1 {
 #description_text {
 	flex: 1;
 	text-align: justify;
+	padding-top: 40px;
 }
 
 @media (max-width: 700px) {
@@ -212,7 +213,7 @@ h1 {
 }
 
 #program h1 {
-	display: none;
+	
 }
 
 .program_listing {
@@ -378,6 +379,32 @@ h1 {
 .speake_bio_title {
 	font-weight: bold;
 }
+
+
+#speaker_spotlights {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: space-evenly;
+}
+
+.speaker_spotlight {
+	width: 250px;
+	margin: 0 10px 10px 10px;
+}
+
+.speaker_spotlight .speaker_spotlight_name {
+	text-align: center;
+}
+
+.speaker_spotlight .speaker_spotlight_title {
+	text-align: center;
+}
+
+.speaker_spotlight img {
+	margin-top: 4px;
+}
+
 
 #tickets {
 	background-color: #4a0308;
@@ -567,7 +594,10 @@ h1 {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+}
 
+#sponsor_logos img {
+	height: 150px;
 }
 
 #sponsor_logos a {
