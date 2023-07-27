@@ -528,8 +528,8 @@ h1 {
 #organizers {
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 20px 10px 0 10px;
 }
 
 @media (min-width: 750px) {	
@@ -542,6 +542,7 @@ h1 {
 .organizer {
 	display: flex;
 	padding: 10px 0;
+	min-width: 300px;
 }
 
 .organizer_portrait {
