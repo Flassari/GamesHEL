@@ -254,6 +254,11 @@ h1 {
 	font-weight: bold;
 }
 
+.recording .video_button {
+	height: 14px;
+	padding-right: 4px;
+}
+
 .program_listing.expanded {
 	background-size: cover;
 	background-position: center top;
