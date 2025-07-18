@@ -430,8 +430,6 @@
 					<h2>Code of Conduct</h2>
 					We expect all participants to adhere to our <a href="code_of_conduct.html" target="_blank" rel="noopener">Code of Conduct</a>. Organizers reserve the right to remove anyone breaking the Code of Conduct from the event with no refunds. 
 				</div>
-
-				<div id="map"></div>
 			</div>
 			
 		</div>
@@ -484,32 +482,5 @@
 			Privacy Policy: We don't track you on this page. See <a href="https://www.eventbrite.com/privacypolicy" target="_blank" rel="noopener"> EventBrite's privacy policy</a> for tickets. See <a href="https://mailchimp.com/legal/" target="_blank" rel="noopener">MailChimp's privacy policy</a> for email list.
 		</div>
 	</footer>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		function initMap() {
-			var buildings="#762e2c", buildingOutlines="#4a0308", ground="#f5f5f5", poi="#e3e3e3", roads="#ffffff", roadOutline="#4a0308", text="#4a0308", textOutline = "#ffffff", ocean="#b9d3c2";
-			// Styles a map in night mode.
-			var map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: 60.1664, lng: 24.9216},
-			zoom: 17,
-			styles: [{"elementType":"labels.text.fill","stylers":[{"color":text}]},{"elementType":"labels.text.stroke","stylers":[{"color":textOutline}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":ground}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":buildings}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"color":buildingOutlines}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":poi}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":roads}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":roadOutline},{"weight":1}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":text}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":roadOutline}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":ocean}]}]
-			});
-			var marker = new google.maps.Marker({
-				position: {lat: 60.1664, lng: 24.9216},
-				map: map,
-				title: 'Games Factory'
-			});
-		}
-
-		
-		
-		$(document).ready(function(){
-			$(".program_header").click(function(e){
-				$(this).parent().toggleClass("expanded");
-			});
-		});
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbo71wXjOaajJjgaM4T2fCpiG9q9Abcus&callback=initMap" async defer></script>
 </body>
 </html>
